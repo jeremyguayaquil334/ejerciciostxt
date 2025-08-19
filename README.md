@@ -1,18 +1,26 @@
-## Getting Started
+# FuturoTech - Registro de Marcaciones
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aplicación de escritorio en JavaFX con MySQL 5.7 para registrar entrada/salida de empleados.
 
-## Folder Structure
+## Tecnologías
+- Java 17
+- JavaFX 21
+- Maven
+- MySQL 5.7 (Docker)
+- JDBC
 
-The workspace contains two folders by default, where:
+## Instalación
+1. Construir y levantar MySQL con Docker:
+```bash
+docker build -t mysql-futurotech .
+docker run --name mysql-futurotech -p 3306:3306 -d mysql-futurotech
+```
+2. Ejecutar la aplicación:
+```bash
+mvn javafx:run
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Funcionalidades
+- Registro de entrada/salida con confirmación.
+- Guardado en MySQL.
+- Visualización en tabla (TableView).
